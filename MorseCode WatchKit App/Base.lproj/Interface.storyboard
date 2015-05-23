@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="6" id="MHR-pI-Hym">
+                            <items>
+                                <button width="1" alignment="left" title="Dits and Dahs" id="4ss-4s-rv4">
+                                    <connections>
+                                        <segue destination="vFq-iI-vaa" kind="push" id="I81-VU-4zZ"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="About" id="UsD-x4-xYR">
+                                    <connections>
+                                        <segue destination="b6N-uq-bBO" kind="push" id="KEv-Df-K2F"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-419" y="232"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="qns-qc-lm9">
+            <objects>
+                <controller id="b6N-uq-bBO">
+                    <items>
+                        <label alignment="left" numberOfLines="0" id="uOg-LS-cj1">
+                            <mutableString key="text">Morse code is a medium of communication which employs a series of dots and dashes to represent the letters of the English alphabet and digits.
+
+On clicking the button 'Dits and Dahs' you'll be taken to the morse code interface where we have three main buttons. The button with circle icon represents Dots. The button with a hyphen represents Dashes. Button named space is used to denote space between two words.
+
+There is a minimum delay of 1 second (configurable in the next version) which helps distinguish characters.
+
+You can view your fine morse code handiwork by long pressing the screen and selecting 'Review'.
+Happy Tapping.</mutableString>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-419" y="935"/>
+        </scene>
+        <!--Morse Interface Controller-->
+        <scene sceneID="8vS-eh-19f">
+            <objects>
+                <controller id="vFq-iI-vaa" customClass="MorseInterfaceController">
+                    <items>
+                        <label width="1" height="32" alignment="left" textAlignment="center" id="ukO-6N-Pgd"/>
+                        <group width="1" alignment="left" id="aDD-82-RjK">
+                            <items>
+                                <button width="56" height="50" alignment="center" title="⃝" id="PaO-47-aE4">
+                                    <accessibilityTraits key="accessibilityTraits" none="YES" button="YES" playsSound="YES"/>
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="36"/>
+                                    <connections>
+                                        <action selector="dotAction" destination="vFq-iI-vaa" id="tum-PO-37R"/>
+                                    </connections>
+                                </button>
+                                <separator alignment="center" verticalAlignment="center" id="lYm-jr-Ru4">
+                                    <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </separator>
+                                <button width="57" height="50" alignment="center" title="-" id="qYC-dM-dVo">
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="38"/>
+                                    <connections>
+                                        <action selector="tapAction" destination="vFq-iI-vaa" id="nb0-kQ-bx2"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <separator width="117" alignment="center" id="m3Z-Sx-GwB"/>
+                        <group width="1" height="39" alignment="left" layout="vertical" id="4cf-j7-MfT">
+                            <items>
+                                <button width="116" alignment="center" title="Space" id="xAT-ac-Pkx">
+                                    <accessibilityTraits key="accessibilityTraits" none="YES" button="YES" playsSound="YES"/>
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                    <connections>
+                                        <action selector="spaceAction" destination="vFq-iI-vaa" id="xL1-jX-IRT"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="JPU-uY-ATh">
+                        <items>
+                            <menuItem title="Review" icon="more" id="KBp-tt-zfB">
+                                <connections>
+                                    <action selector="viewText" destination="vFq-iI-vaa" id="nrQ-Jc-weS"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="displayLabel" destination="ukO-6N-Pgd" id="mcA-sh-0QI"/>
+                        <outlet property="tapButton" destination="qYC-dM-dVo" id="E5d-cF-tve"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-155" y="232"/>
+        </scene>
+        <!--Back-->
+        <scene sceneID="TGm-1l-cLy">
+            <objects>
+                <controller identifier="TextInterface" title="Back" id="ztL-qq-XCz" customClass="TextInterfaceController">
+                    <items>
+                        <label width="1" alignment="left" text="Your text will appear here" numberOfLines="0" id="rWa-PI-SGR"/>
+                    </items>
+                    <connections>
+                        <outlet property="viewCompleteText" destination="rWa-PI-SGR" id="1Bu-h4-aR2"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="71" y="232"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="pbE-iW-zbo">
+            <objects>
+                <controller id="ywg-mU-KM8">
+                    <items>
+                        <label width="1" alignment="left" text="Inter-char delay" textAlignment="center" id="51z-OG-Jd8"/>
+                        <label width="1" height="20" alignment="left" text="1" textAlignment="center" id="WHm-T9-xUb"/>
+                        <slider width="1" alignment="left" value="1" minimum="1" maximum="3" steps="3" id="jqs-1c-HTi">
+                            <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </slider>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-419" y="-75"/>
+        </scene>
+    </scenes>
+</document>
