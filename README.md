@@ -1,4 +1,4 @@
-# MorseCode
+# MorseCodeWatchKit
 I was not planning on picking up WatchKit but I came across an [article about Apple Watch and Morse Code](http://www.imore.com/apple-watch-and-morse-code) and I just couldn't help myself.
 
 This is the most basic morse code implementation I could think of without opening photoshop/sketch. Till I find time to make images for the animations I have in mind (passive-aggressive-eye-roll), this app will proudly don oitnb colours. Happy tapping.
