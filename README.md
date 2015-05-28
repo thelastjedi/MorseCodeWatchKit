@@ -17,5 +17,5 @@ This is the most basic morse code implementation I could think of without openin
 
 #### iPhone App
 * Settings
-* View saved notes
+* ~~View saved notes~~ ✔
 * Morse cheat sheet
