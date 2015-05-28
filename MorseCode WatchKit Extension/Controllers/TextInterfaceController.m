@@ -16,7 +16,6 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    
     [self.viewCompleteText setText:[[MorseHelper sharedHelper] fulltext]];
 }
 

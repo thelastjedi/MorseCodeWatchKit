@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE05EB981B1713A80031B786 /* NoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE05EB971B1713A80031B786 /* NoteView.m */; };
+		EEC26A461B1627FA00B32D33 /* MenuInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC26A451B1627FA00B32D33 /* MenuInterfaceController.m */; };
+		EEC26A4E1B16ED5D00B32D33 /* MCAppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC26A4D1B16ED5D00B32D33 /* MCAppHelper.m */; };
+		EEC26A551B16F93D00B32D33 /* NotesPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC26A541B16F93D00B32D33 /* NotesPreviewCell.m */; };
+		EEC26A5A1B17118500B32D33 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC26A591B17118500B32D33 /* DetailViewController.m */; };
 		EEE143341B0BA7DF002FDF9E /* MorseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE143331B0BA7DF002FDF9E /* MorseHelper.m */; };
 		EEE143391B0BB995002FDF9E /* TextInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE143381B0BB995002FDF9E /* TextInterfaceController.m */; };
 		EEEDF1061B0B868B00AF037A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDF1051B0B868B00AF037A /* main.m */; };
@@ -55,6 +60,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EE05EB961B1713A80031B786 /* NoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteView.h; sourceTree = "<group>"; };
+		EE05EB971B1713A80031B786 /* NoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteView.m; sourceTree = "<group>"; };
+		EEC26A441B1627FA00B32D33 /* MenuInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuInterfaceController.h; sourceTree = "<group>"; };
+		EEC26A451B1627FA00B32D33 /* MenuInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuInterfaceController.m; sourceTree = "<group>"; };
+		EEC26A4C1B16ED5D00B32D33 /* MCAppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAppHelper.h; sourceTree = "<group>"; };
+		EEC26A4D1B16ED5D00B32D33 /* MCAppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAppHelper.m; sourceTree = "<group>"; };
+		EEC26A531B16F93D00B32D33 /* NotesPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesPreviewCell.h; sourceTree = "<group>"; };
+		EEC26A541B16F93D00B32D33 /* NotesPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesPreviewCell.m; sourceTree = "<group>"; };
+		EEC26A581B17118500B32D33 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		EEC26A591B17118500B32D33 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		EEE143321B0BA7DF002FDF9E /* MorseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MorseHelper.h; sourceTree = "<group>"; };
 		EEE143331B0BA7DF002FDF9E /* MorseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MorseHelper.m; sourceTree = "<group>"; };
 		EEE143371B0BB995002FDF9E /* TextInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInterfaceController.h; sourceTree = "<group>"; };
@@ -98,6 +113,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EEC26A481B16ED4700B32D33 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EEC26A4C1B16ED5D00B32D33 /* MCAppHelper.h */,
+				EEC26A4D1B16ED5D00B32D33 /* MCAppHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EEC26A4F1B16F8DE00B32D33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE05EB961B1713A80031B786 /* NoteView.h */,
+				EE05EB971B1713A80031B786 /* NoteView.m */,
+				EEC26A531B16F93D00B32D33 /* NotesPreviewCell.h */,
+				EEC26A541B16F93D00B32D33 /* NotesPreviewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EEE143311B0BA6BA002FDF9E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +168,8 @@
 			children = (
 				EEEDF1071B0B868B00AF037A /* AppDelegate.h */,
 				EEEDF1081B0B868B00AF037A /* AppDelegate.m */,
+				EEC26A4F1B16F8DE00B32D33 /* Views */,
+				EEC26A481B16ED4700B32D33 /* Helpers */,
 				EEEDF12C1B0B871C00AF037A /* Controllers */,
 				EEEDF10D1B0B868B00AF037A /* Main.storyboard */,
 				EEEDF1101B0B868B00AF037A /* Images.xcassets */,
@@ -156,6 +193,8 @@
 			children = (
 				EEEDF12D1B0B871C00AF037A /* ViewController.h */,
 				EEEDF12E1B0B871C00AF037A /* ViewController.m */,
+				EEC26A581B17118500B32D33 /* DetailViewController.h */,
+				EEC26A591B17118500B32D33 /* DetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +239,8 @@
 		EEEDF1551B0B995A00AF037A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EEC26A441B1627FA00B32D33 /* MenuInterfaceController.h */,
+				EEC26A451B1627FA00B32D33 /* MenuInterfaceController.m */,
 				EEEDF15C1B0B998400AF037A /* MorseInterfaceController.h */,
 				EEEDF15D1B0B998400AF037A /* MorseInterfaceController.m */,
 				EEE143371B0BB995002FDF9E /* TextInterfaceController.h */,
@@ -340,8 +381,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEEDF12F1B0B871C00AF037A /* ViewController.m in Sources */,
+				EEC26A4E1B16ED5D00B32D33 /* MCAppHelper.m in Sources */,
 				EEEDF1091B0B868B00AF037A /* AppDelegate.m in Sources */,
+				EEC26A551B16F93D00B32D33 /* NotesPreviewCell.m in Sources */,
 				EEEDF1061B0B868B00AF037A /* main.m in Sources */,
+				EEC26A5A1B17118500B32D33 /* DetailViewController.m in Sources */,
+				EE05EB981B1713A80031B786 /* NoteView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +396,7 @@
 			files = (
 				EEEDF15E1B0B998400AF037A /* MorseInterfaceController.m in Sources */,
 				EEE143341B0BA7DF002FDF9E /* MorseHelper.m in Sources */,
+				EEC26A461B1627FA00B32D33 /* MenuInterfaceController.m in Sources */,
 				EEE143391B0BB995002FDF9E /* TextInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

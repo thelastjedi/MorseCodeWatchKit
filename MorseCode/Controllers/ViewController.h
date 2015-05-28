@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MCAppHelper.h"
+#import "NotesPreviewCell.h"
+#import "DetailViewController.h"
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UITableView *savedNotesTable;
 
 @end
 

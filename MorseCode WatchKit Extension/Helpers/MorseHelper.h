@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@import UIKit;
+@import WatchKit;
 @protocol MSHDelegate <NSObject>
 -(void)updateTextLabel:(NSString*)text;
 @end
@@ -41,6 +42,7 @@ typedef enum : NSUInteger {
  *  Hitherto entered morse code translated into English
  */
 - (NSString*)fulltext;
+
 
 @property (nonatomic, strong) id<MSHDelegate> msDelegate;
 

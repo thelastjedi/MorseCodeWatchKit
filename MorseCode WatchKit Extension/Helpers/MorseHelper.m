@@ -7,6 +7,7 @@
 //
 
 #import "MorseHelper.h"
+
 #define kMCDelayKey @"MorseCodeDelayKey"
 
 @interface MorseHelper()
@@ -39,18 +40,31 @@
 #pragma mark - Public Methods
 
 - (void)reset{
-    self.sentence = [[NSMutableString alloc] initWithString:@""];
-    self.words = nil;
+    
+    if((sentence.length != 0)||(words)){
+        NSString *dateString = [[NSDate date] description];
+        NSDictionary *applicationData = @{
+                                            dateString : [[MorseHelper sharedHelper] fulltext]
+                                         };
+        
+        //AppDelegate.m
+        [WKInterfaceController openParentApplication:applicationData reply:^(NSDictionary *replyInfo, NSError *error) {
+            if(error) NSLog(@"Error: %@", error);
+        }];
+    }
+    
+    sentence = [[NSMutableString alloc] initWithString:@""];
+    words = nil;
 }
 
 - (void)inputReceived:(MorseCodeInput)code{
     
     if(([self isNewCharacter])||(code == MC_Space)){
-        [self.sentence appendString:[self updateTranslatedText]];
+        [sentence appendString:[self updateTranslatedText]];
     }
     
     if (code == MC_Space) {
-        [self.sentence appendString:@" "];
+        [sentence appendString:@" "];
         return;
     }
     
@@ -63,7 +77,7 @@
 
 -(NSString*)fulltext{
     if(words){
-        [self.sentence appendString:[self updateTranslatedText]];
+        [sentence appendString:[self updateTranslatedText]];
     }
     return [NSString stringWithFormat:@"%@", sentence];
 }

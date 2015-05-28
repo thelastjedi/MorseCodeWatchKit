@@ -8,7 +8,19 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Duv-0L-rbN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="vXZ-lx-hvc" id="HSV-mC-vMD"/>
+                            <outlet property="delegate" destination="vXZ-lx-hvc" id="wvs-Re-r5R"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" id="K9u-BW-joy"/>
+                    <connections>
+                        <outlet property="savedNotesTable" destination="Duv-0L-rbN" id="O30-UO-6cW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

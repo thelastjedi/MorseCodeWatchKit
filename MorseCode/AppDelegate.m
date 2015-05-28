@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MCAppHelper.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[UIView appearance] setTintColor:[UIColor orangeColor]];
     return YES;
 }
 
@@ -39,7 +40,20 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    [[MCAppHelper sharedHelper] archiveNotes];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void(^)(NSDictionary *replyInfo))reply {
+    
+    if (userInfo){
+        reply(@{@"success" : @([[MCAppHelper sharedHelper]
+                                updateSavedNotes:userInfo])});
+    }
+    else{
+        reply(@{@"success" : @(NO)});
+    }
+}
+
 
 @end

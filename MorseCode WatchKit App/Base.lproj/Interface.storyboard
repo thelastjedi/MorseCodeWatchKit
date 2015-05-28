@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Menu Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc">
+                <controller id="AgC-eL-Hgc" customClass="MenuInterfaceController">
                     <items>
                         <group width="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="6" id="MHR-pI-Hym">
                             <items>
@@ -129,7 +129,7 @@ Happy Tapping.</mutableString>
                     <items>
                         <label width="1" alignment="left" text="Inter-char delay" textAlignment="center" id="51z-OG-Jd8"/>
                         <label width="1" height="20" alignment="left" text="1" textAlignment="center" id="WHm-T9-xUb"/>
-                        <slider width="1" alignment="left" value="1" minimum="1" maximum="3" steps="3" id="jqs-1c-HTi">
+                        <slider width="1" alignment="left" continuous="YES" value="1" minimum="1" maximum="3" steps="2" id="jqs-1c-HTi">
                             <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         </slider>
                     </items>

@@ -15,8 +15,6 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    
-    [[MorseHelper sharedHelper] reset];
     [[MorseHelper sharedHelper] setMsDelegate:self];
 }
 
