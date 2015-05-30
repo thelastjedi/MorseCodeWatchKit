@@ -122,10 +122,10 @@ Happy Tapping.</mutableString>
             </objects>
             <point key="canvasLocation" x="71" y="232"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Settings-->
         <scene sceneID="pbE-iW-zbo">
             <objects>
-                <controller id="ywg-mU-KM8">
+                <controller title="Settings" id="ywg-mU-KM8">
                     <items>
                         <label width="1" alignment="left" text="Inter-char delay" textAlignment="center" id="51z-OG-Jd8"/>
                         <label width="1" height="20" alignment="left" text="1" textAlignment="center" id="WHm-T9-xUb"/>
@@ -135,7 +135,7 @@ Happy Tapping.</mutableString>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-419" y="-75"/>
+            <point key="canvasLocation" x="-419" y="-25"/>
         </scene>
     </scenes>
 </document>
