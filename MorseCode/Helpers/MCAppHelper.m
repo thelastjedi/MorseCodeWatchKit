@@ -42,6 +42,10 @@
     return YES;
 }
 
+-(void)deleteNoteAtIndex:(NSInteger)index{
+    [savedNotes removeObjectAtIndex:index];
+}
+
 +(NSString*)getTimeStampFromDate:(NSString*)dateString{
 
     NSDate   * now = [NSDate date];

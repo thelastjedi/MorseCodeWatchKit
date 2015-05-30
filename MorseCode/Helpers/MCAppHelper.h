@@ -18,6 +18,7 @@
 +  (NSString*)morseCodeFor:(NSString*) originalText;
 
 - (BOOL)updateSavedNotes:(NSDictionary*)newNote;
+- (void)deleteNoteAtIndex:(NSInteger)index;
 - (void)archiveNotes;
 
 @property (nonatomic, strong) NSMutableArray * savedNotes;
