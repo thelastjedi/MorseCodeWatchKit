@@ -9,6 +9,17 @@ This is the most basic morse code implementation I could think of without openin
 ![Build 1](https://cloud.githubusercontent.com/assets/1327490/7782576/333bc1a6-013c-11e5-8076-84b41b6d8c3e.gif)
  
 
+## Features
+
+#### WatchKit App
+* Use Morse Code to write notes
+
+#### iPhone App
+* View saved notes
+* Toggle between English and Morse Code
+* Delete notes
+
+
 ## WIP features
 
 #### WatchKit App
