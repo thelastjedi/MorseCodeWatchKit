@@ -20,7 +20,7 @@ This is the most basic morse code implementation I could think of without openin
 * Delete notes
 
 
-## WIP features
+## Planned features
 
 #### WatchKit App
 * Settings
